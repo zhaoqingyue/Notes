@@ -519,6 +519,7 @@ new Thread(new Runnable() {
 ```
 最后看两张图：
 ![image](https://github.com/zhaoqingyue/Notes/blob/master/android/handler1.jpg)
+
 ![image](https://github.com/zhaoqingyue/Notes/blob/master/android/handler2.png)
 
 
