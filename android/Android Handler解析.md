@@ -18,7 +18,7 @@ private void executeTask() {
           @Override
           public void run() {
               try {
-                  Bitmap bitmap = loadImg("http://blog.happyhls.me/wp-content/uploads/2015/12/fresco-og-image-1024x362.png");
+                  Bitmap bitmap = loadImg("http://blog.happyhls/2015/12/image-1024x362.png");
               } catch (IOException e) {
                   e.printStackTrace();
                   mHandler.sendMessage(mHandler.obtainMessage(-1,e.getMessage()));
@@ -56,11 +56,9 @@ private void executeTask() {
         public void run() {
             // 子线程
 
-            //............. 耗时操作 ................... //
-
-            Bitmap bitmap = loadImg("http://i.imgur.com/DvpvklR.png");
-
-            //............. 耗时操作 ................... //
+            // 耗时操作
+            Bitmap bitmap = loadImg("http://com/DvpvklR.png");
+            // 耗时操作 
 
             Message msg = new Message();
             msg.what = 1;
@@ -183,7 +181,7 @@ Android应用在启动时，会执行到ActivityThrea类的main()方法，Activi
 在这个入口里，会做很多初始化的操作。其中就有Looper相关的设置，代码如下：
 ```
 public static void main(String[] args) {
-    //............. 无关代码...............
+    // 无关代码
     Looper.prepareMainLooper();
     Looper.loop();
     throw new RuntimeException("
@@ -518,6 +516,7 @@ new Thread(new Runnable() {
 }).start();
 ```
 最后看两张图：
+
 ![image](https://github.com/zhaoqingyue/Notes/blob/master/android/handler1.jpg)
 
 ![image](https://github.com/zhaoqingyue/Notes/blob/master/android/handler2.png)
